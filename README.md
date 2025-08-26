@@ -1,7 +1,3 @@
-## License
-This repository is published only for hackathon evaluation purposes.  
-Currently, **All Rights Reserved** by the authors.
-
 このリポジトリはハッカソン審査用に一時公開しています。  
 **All Rights Reserved（再利用不可）**。審査終了後に非公開化またはアーカイブ化します。
 
