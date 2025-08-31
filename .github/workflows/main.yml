@@ -33,20 +33,22 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build
+      - name: Build (fix base path for org/repo)
         run: npm run build
         env:
-          PUBLIC_URL: /Example_App
-          CI: false   # ← これで lint 警告をエラーにしない
+          # 公開URL: https://Open-Data-Hackathon-Old-Wood.github.io/publish-FrontEnd/
+          # → CRA は PUBLIC_URL を /<repo> にする
+          PUBLIC_URL: /publish-FrontEnd
+          CI: false   # Lint警告をエラー扱いにしない
 
-      # SPA直リンク対応（404→index）
+      # SPA直リンク対策（BrowserRouter利用時）。HashRouterならあっても害なし
       - name: Add SPA 404
-        run: cp build/index.html build/404.html
+        run: cp build/index.html build/404.html || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'
+          path: ./build
 
   deploy:
     runs-on: ubuntu-latest
