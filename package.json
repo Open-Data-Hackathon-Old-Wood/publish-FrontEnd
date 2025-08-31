@@ -1,5 +1,6 @@
 {
   "name": "good-old-tree",
+  "homepage": "https://github.com/Open-Data-Hackathon-Old-Wood/publish-FrontEnd",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

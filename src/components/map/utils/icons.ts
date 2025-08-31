@@ -11,19 +11,19 @@ export const blueDotIcon = L.divIcon({
 
 // ローカルピン（登録候補のピン）: /public/icons/ローカルピン.png
 export const save_pinIcon = L.icon({
-  iconUrl: '/icons/ローカルピン.png',
+  iconUrl: '${process.env.PUBLIC_URL}/icons/ローカルピン.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });
 
 // 登録済みピン（マツ/ナラ）: /public/icons/マツ.png, /public/icons/ナラ.png
 export const check_pinIcon_matsu = L.icon({
-  iconUrl: '/icons/マツ.png',
+  iconUrl: '${process.env.PUBLIC_URL}/icons/マツ.png',
   iconSize: [30, 30],
   iconAnchor: [15, 30],
 });
 export const check_pinIcon_nara = L.icon({
-  iconUrl: '/icons/ナラ.png',
+  iconUrl: '${process.env.PUBLIC_URL}/icons/ナラ.png',
   iconSize: [30, 30],
   iconAnchor: [15, 30],
 });
