@@ -5,10 +5,11 @@ Currently, **All Rights Reserved** by the authors.
 このリポジトリはハッカソン審査用に一時公開しています。  
 **All Rights Reserved（再利用不可）**。審査終了後に非公開化またはアーカイブ化します。
 
+---
+
 フロントのみのDemoを下記URLで確認できます。本デモサイトはフロントエンドのみで構成されています。
 バックエンドと繋がっていないので、画像の確認やデータの登録はできません
 https://open-data-hackathon-old-wood.github.io/publish-FrontEnd/
----
 ![Demo](./demo/top.png)
 ## 0. 前提
 
