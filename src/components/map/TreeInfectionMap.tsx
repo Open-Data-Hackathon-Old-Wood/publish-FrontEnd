@@ -451,7 +451,7 @@ export default function TreeInfectionMap() {
   useEffect(() => {
     (async () => {
       try {
-        const indexRes = await fetch('/行政区域/index.json');
+        const indexRes = await fetch(`${process.env.PUBLIC_URL}/行政区域/index.json`);
         if (indexRes.ok) {
           const files: string[] = await indexRes.json();
           const all: FeatureCollection = { type: 'FeatureCollection', features: [] };
@@ -465,12 +465,12 @@ export default function TreeInfectionMap() {
           }
           setGeoJsonData(all);
         } else {
-          const res = await fetch('${process.env.PUBLIC_URL}/tokyo_section.geojson');
+          const res = await fetch(`${process.env.PUBLIC_URL}/tokyo_section.geojson`);
           if (res.ok) setGeoJsonData(await res.json());
         }
       } catch {
         try {
-          const res = await fetch('${process.env.PUBLIC_URL}/tokyo_section.geojson');
+          const res = await fetch(`${process.env.PUBLIC_URL}/tokyo_section.geojson`);
           if (res.ok) setGeoJsonData(await res.json());
         } catch {}
       }
@@ -479,7 +479,7 @@ export default function TreeInfectionMap() {
 
   // --- 公園 GeoJSON ---
   useEffect(() => {
-    fetch('${process.env.PUBLIC_URL}/park.geojson')
+    fetch(`${process.env.PUBLIC_URL}/park.geojson`)
       .then((res) => res.json())
       .then((data) => setParkGeojsonData(data))
       .catch(() => {});
@@ -874,10 +874,10 @@ const setSelectedAreaByName = useCallback(
         position: pos,
         textureRating: 4, 
         photos: {
-          wholeTree: ['${process.env.PUBLIC_URL}/sample1.jpg'],
-          leaves: ['${process.env.PUBLIC_URL}/sample-leaf.jpg'],
-          detail: ['${process.env.PUBLIC_URL}/sample2.jpg'],
-          base: ['${process.env.PUBLIC_URL}/sample3.jpg'],
+          wholeTree: [`${process.env.PUBLIC_URL}/sample1.jpg`],
+          leaves: [`${process.env.PUBLIC_URL}/sample-leaf.jpg`],
+          detail: [`${process.env.PUBLIC_URL}/sample2.jpg`],
+          base: [`${process.env.PUBLIC_URL}/sample3.jpg`],
         },
         // ▼ ダミー対象期間 & 登録日
         start: '2025-08-01',
@@ -890,9 +890,9 @@ const setSelectedAreaByName = useCallback(
         position: pos,
         holeSize: 12,
         photos: {
-          wholeTree: ['${process.env.PUBLIC_URL}/sample4.jpg'],
-          detail: ['${process.env.PUBLIC_URL}/sample-hole.jpg'],
-          base: ['${process.env.PUBLIC_URL}/sample5.jpg'],
+          wholeTree: [`${process.env.PUBLIC_URL}/sample4.jpg`],
+          detail: [`${process.env.PUBLIC_URL}/sample-hole.jpg`],
+          base: [`${process.env.PUBLIC_URL}/sample5.jpg`],
         },
             // ▼ ダミー対象期間 & 登録日
       start: '2025-08-01',
