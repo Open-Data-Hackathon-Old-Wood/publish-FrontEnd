@@ -1,104 +1,46 @@
-## License
-This repository is published only for hackathon evaluation purposes.  
-Currently, **All Rights Reserved** by the authors.
+# Getting Started with Create React App
 
-このリポジトリはハッカソン審査用に一時公開しています。  
-**All Rights Reserved（再利用不可）**。審査終了後に非公開化またはアーカイブ化します。
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-フロントのみのDemoを下記URLで確認できます。本デモサイトはフロントエンドのみで構成されています。
-バックエンドと繋がっていないので、画像の確認やデータの登録はできません
-https://open-data-hackathon-old-wood.github.io/publish-FrontEnd/
-![Demo](./demo/top.png)
-## 0. 前提
+In the project directory, you can run:
 
-- OS: macOS / Linux / Windows（WSL推奨）
-- 必須ツール:
-  - **Git**
-  - **Node.js (v18 以降推奨)**
-  - **npm**（Node.js に同梱）
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## 1. Node.js / npm の導入
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### macOS / Linux
-```bash
-# Homebrew を利用する場合
-brew install node
+### `npm test`
 
-# バージョン確認
-node -v
-npm -v
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-または、バージョン管理ツール [nvm](https://github.com/nvm-sh/nvm) を利用すると便利です。
+### `npm run build`
 
-```bash
-# nvm の導入後
-nvm install 18
-nvm use 18
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Windows
-- [Node.js 公式サイト](https://nodejs.org/) から LTS 版をインストール  
-- インストール後に PowerShell で確認:
-```powershell
-node -v
-npm -v
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 2. .env の作成
+### `npm run eject`
 
-プロジェクトルートに `.env` を作成します。  
-以下は例です（必要に応じて修正してください）。
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```dotenv
-# API (BackEnd)のエンドポイント
-REACT_APP_API_BASE_URL=http://localhost:8000
-# Backendの有無。オンにするとBackendと接続し、オフだとフロントのみで動作します。フロントのみの時はDBを使用しないので、データの書き出し読み込みは行えません
-REACT_APP_USE_REAL_DB=true
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## 3. 依存関係のインストール
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-初回のみ実行します。
+## Learn More
 
-```bash
-npm install
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
-
-## 4. 開発サーバーの起動
-
-```bash
-npm start
-```
-
-ブラウザで [http://localhost:3000](http://localhost:3000) を開くとフロントエンドが表示されます。
-
----
-
-## 5. トラブルシューティング
-
-- **npm: command not found**
-  - Node.js / npm が正しくインストールされているか確認してください
-  - `node -v`, `npm -v` がエラーなく動作する必要があります
-
-- **依存関係エラー**
-  ```bash
-  rm -rf node_modules package-lock.json
-  npm install
-  ```
-
-- **ポート競合 (3000 が使用中)**
-  - 別のアプリが既に 3000 番ポートを使用している可能性があります
-  - `.env` に `PORT=3001` を追加するなどで回避できます
-
----
+To learn React, check out the [React documentation](https://reactjs.org/).
