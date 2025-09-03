@@ -8,7 +8,7 @@ Currently, **All Rights Reserved** by the authors.
 ---
 
 フロントのみのDemoを下記URLで確認できます。本デモサイトはフロントエンドのみで構成されています。
-バックエンドと繋がっていないので、画像の確認やデータの登録はできません
+バックエンドと繋がっていないのでデータの登録はできません
 https://open-data-hackathon-old-wood.github.io/publish-FrontEnd/
 ![Demo](./demo/top.png)
 ## 0. 前提
