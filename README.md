@@ -7,9 +7,11 @@ Currently, **All Rights Reserved** by the authors.
 
 ---
 
-フロントのみのDemoを下記URLで確認できます。本デモサイトはフロントエンドのみで構成されています。
-バックエンドと繋がっていないのでデータの登録はできません
+フロントのみのDemoを下記URLで確認できます。
+本デモサイトはフロントエンドのみで構成されており、パワポのGIFとは異なり、バックエンドと繋がっていないため、新規データの登録はできません。
 https://open-data-hackathon-old-wood.github.io/publish-FrontEnd/
+バックエンドについては、下記リポジトリでコードを公開しています。
+https://github.com/Open-Data-Hackathon-Old-Wood/publish-BackEnd
 ![Demo](./demo/top.png)
 ## 0. 前提
 
